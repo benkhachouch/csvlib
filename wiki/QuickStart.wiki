@@ -92,6 +92,16 @@ trace ( csv.data.join('\n') );
 // 3,b,j,d
 }}}
 
+ * *getRecordSet*( <index : int> ) : Array
+  * first argument is the index position to give the recordset
+  * return is a recordset array
+{{{
+csv.getRecordSet( 0 )
+
+// -> trace
+// 0,b,g,d
+}}}
+
  * *deleteRecordSet*( <index : int> ) : Boolean
   * first argument is the index position to delete
   * method returns true or false on operation complete
