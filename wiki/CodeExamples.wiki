@@ -16,7 +16,7 @@ function completeHandler ( event : Event )
 	// do something ...
 }
 }}}
- * With public load method
+ * With load method
 {{{
 var csv : CSV = new CSV();
 csv.addEventListener( Event.COMPLETE, completeHandler );
@@ -26,7 +26,7 @@ function completeHandler ( event : Event )
 	// do something ...
 }
 }}}
-===Parse with individual filed seperator, recordset delimiter and quote tokens:===
+===Parse with individual filed seperator, recordset delimiter or quote tokens:===
 If you want to change these default parser values, you must load your file with the "load" method, after initialization, *before* the load call! All other will be ignored.
 {{{
 csv = new CSV();
