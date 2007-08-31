@@ -70,8 +70,8 @@ csv.load ( new URLRequest('example-7.csv') );
 }}}
 ===Data functions and manipulations:===
  * *addRecordSet*( <recordset : array>, <index : int = null> ) : void
- * the first argument is your recordset
- * the second argument is the index position to add recordset at. If index ist bigger than data array length, it will be pushed at the end of these. Negative values are supportet! Default is null eq. the recorsed will be pushed.
+  * the first argument is your recordset
+  * the second argument is the index position to add recordset at. If index ist bigger than data array length, it will be pushed at the end of these. Negative values are supportet! Default is null eq. the recorsed will be pushed.
 {{{
 var csv : CSV = new CSV();
 csv.embededHeader = false
@@ -93,8 +93,8 @@ trace ( csv.data.join('\n') );
 }}}
 
  * *deleteRecordSet*( <index : int> ) : Boolean
- * first argument is the index position to delete
- * method returns true or false on operation complete
+  * first argument is the index position to delete
+  * method returns true or false on operation complete
 {{{
 if ( csv.deleteRecordSet( 0 ) )
 	 trace ( csv.data.join('\n') );
@@ -106,8 +106,8 @@ if ( csv.deleteRecordSet( 0 ) )
 }}}
 
  * *sort*( <needle : (string|array) >, <removeDuplicates : Boolean = true> ) : void
- * first argument can be a string, or a 1D array that includes a list of needles
- * the second argument removes duplicate hits from result. Default is true.
+  * first argument can be a string, or a 1D array that includes a list of needles
+  * the second argument removes duplicates. Default is true.
 {{{
 // with duplicates
 var filtered : Array = csv.search( ['1', 'k', 'k', '3'], false )
