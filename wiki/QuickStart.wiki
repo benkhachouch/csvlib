@@ -147,20 +147,51 @@ csv.embededHeader = false
 csv.addEventListener( Event.COMPLETE, sortExample );
 csv.load ( new URLRequest('example-8.csv') );
 
+// ascending sort by index position
+csv.sort( 0 );
+trace ( csv.data.join('\n') )
 
 // -> trace
-// 1,b,c,k
-// 1,b,c,k
-// 1,b,c,k
-// 3,b,j,d
+// 1870,Chris,Andre,Collin
+// 1996,Peter,Fritz,Anton
+// 1997,Daniel,Olga,Sula
+// 1999,John,Vanessa,Johanna
+// 2007,Danny,Pierre,0815
 
-// without duplicates
-var filtered : Array = csv.search( ['1', 'k', 'k', '3'] )
-trace( filtered.join('\n') )
+// descending sort by index position
+csv.sort( 0, 'DES' );
+trace ( csv.data.join('\n') )
 
 // -> trace
-// 1,b,c,k
-// 3,b,j,d
+// 2007,Danny,Pierre,0815
+// 1999,John,Vanessa,Johanna
+// 1997,Daniel,Olga,Sula
+// 1996,Peter,Fritz,Anton
+// 1870,Chris,Andre,Collin
+
+// ascending sort by filed name
+csv.header = ['year', 'name', 'surname', 'friends' ]
+csv.sort('friends' );
+trace( csv.data.join('\n') );
+
+// -> trace
+// 2007,Danny,Pierre,0815
+// 1996,Peter,Fritz,Anton
+// 1870,Chris,Andre,Collin
+// 1999,John,Vanessa,Johanna
+// 1997,Daniel,Olga,Sula
+
+// descending sort by field name
+csv.sort('friends', 'DES' );
+trace (csv.data.join('\n'));
+
+// -> trace
+// 1997,Daniel,Olga,Sula
+// 1999,John,Vanessa,Johanna
+// 1870,Chris,Andre,Collin
+// 1996,Peter,Fritz,Anton
+// 2007,Danny,Pierre,0815
+
 }}}
 
 ...
