@@ -1,18 +1,29 @@
 #summary How to use csvlib
 #labels Featured
 
-* ===load a csv file===
+===load a csv file===
+
+ * via constructor
+
 {{{
 import com.shortybmc.data.parser.CSV;
 
-// jghjfh
 var csv : CSV = new CSV( new URLRequest('example-1.csv') );
 csv.addEventListener( Event.COMPLETE, completeHandler );
-function completeHandler ( event : Event )
-{
-   trace ( csv.dump() )
-}
 }}}
+
+ * or load method
+
+{{{
+import com.shortybmc.data.parser.CSV;
+
+var csv : CSV = new CSV();
+csv.addEventListener( Event.COMPLETE, completeHandler );
+csv.load( new URLRequest('example-2.csv') )
+}}}
+
+
+
 
 
 
