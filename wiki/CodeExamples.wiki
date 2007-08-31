@@ -1,4 +1,4 @@
-#summary How to use csvlib
+#summary How to use csvlib - quick start
 #labels Featured
 
 ===Import rule:===
@@ -17,4 +17,13 @@ csv.addEventListener( Event.COMPLETE, completeHandler );
 var csv : CSV = new CSV();
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load( new URLRequest('example-2.csv') )
+}}}
+===Changing of filed seperator, recordset delimiter and quote tokens:===
+{{{
+csv = new CSV();
+csv.fieldSeperator = ';'
+csv.fieldEnclosureToken= '\''
+csv.recordsetDelimiter= '#'
+csv.addEventListener( Event.COMPLETE, completeHandler );
+csv.load( new URLRequest('example-6.csv') )
 }}}
