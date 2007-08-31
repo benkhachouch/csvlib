@@ -33,7 +33,7 @@ The default header settings are:
  * embededHeader = true
  * overwriteHeader = false
 
- Add your own header, if *no* embeded exists
+ Add your own header, if *no* embeded header exists
  {{{
 var csv : CSV = new CSV();
 csv.embededHeader = false
@@ -58,7 +58,6 @@ csv.header = ['My Year', 'My Make', 'My Model']
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-7.csv') );
 }}}
-
 
 
 
