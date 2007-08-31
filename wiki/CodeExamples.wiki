@@ -37,7 +37,7 @@ csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load( new URLRequest('example-6.csv') )
 }}}
 ===Header functions and manipulations:===
-All headers are locked! If you will overwrite a ambeded or own header, you must always write "overwriteHeader = true" after initialisation!
+All headers are after initialisation *locked*! If you will overwrite, use "overwriteHeader = true".
 
 Default header settings are:
  * embededHeader = true
@@ -68,5 +68,4 @@ csv.header = ['My Year', 'My Make', 'My Model']
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-7.csv') );
 }}}
-
 
