@@ -105,7 +105,7 @@ if ( csv.deleteRecordSet( 0 ) )
 // 3,b,j,d
 }}}
 
-*sort*( <needle : *>, <removeDuplicates : Boolean = true> ) : void
+*sort*( <needle : (string|array) >, <removeDuplicates : Boolean = true> ) : void
  * first argument can be a string, or a 1D array that includes a list of needles
  * the second argument removes duplicate hits from result. Default is true.
 {{{
