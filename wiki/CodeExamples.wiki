@@ -11,12 +11,20 @@ import com.shortybmc.data.parser.CSV;
 {{{
 var csv : CSV = new CSV( new URLRequest('example-1.csv') );
 csv.addEventListener( Event.COMPLETE, completeHandler );
+function completeHandler ( event : Event )
+{
+	// do something ...
+}
 }}}
  * With public load method
 {{{
 var csv : CSV = new CSV();
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load( new URLRequest('example-2.csv') )
+function completeHandler ( event : Event )
+{
+	// do something ...
+}
 }}}
 ===Parse with individual filed seperator, recordset delimiter and quote tokens:===
 *Note:* If you want to change these default parser values, you must load your file with the "load" method, after initialization, *before* the load call! All other will be ignored.
@@ -58,7 +66,6 @@ csv.header = ['My Year', 'My Make', 'My Model']
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-7.csv') );
 }}}
-
 
 
 
