@@ -42,7 +42,15 @@ csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-8.csv') );
 }}}
 
- Add your own header, if embeded *exists*, and overwrite him
+ Delete a embeded header
+ {{{
+var csv : CSV = new CSV();
+csv.headerOverwrite = true
+csv.addEventListener( Event.COMPLETE, completeHandler );
+csv.load ( new URLRequest('example-7.csv') );
+}}}
+
+ Delete a embeded header, and overwrite him with your own
  {{{
 var csv : CSV = new CSV();
 csv.headerOverwrite = true
@@ -50,7 +58,6 @@ csv.header = ['My Year', 'My Make', 'My Model']
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-7.csv') );
 }}}
-
 
 
 
