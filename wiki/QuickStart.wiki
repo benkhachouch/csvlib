@@ -1,4 +1,4 @@
-#summary How to use csvlib - quick start
+#summary How to use csvlib
 #labels Featured,Phase-Support,Phase-Deploy
 
 ===Import rule:===
