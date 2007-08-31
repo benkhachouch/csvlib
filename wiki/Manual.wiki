@@ -1,17 +1,16 @@
 #summary My summary headlin
 #labels Featured
 
-= Introduction =
+=Introduction=
 
 my content
 
 
-= Details =
+=Details=
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
   * Headings, paragraphs, and lists
   * Automatic links to other wiki pages
-
 
 
