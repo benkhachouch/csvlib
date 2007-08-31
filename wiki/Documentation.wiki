@@ -1,14 +1,23 @@
-#summary One-sentence summary of this page.
+#summary How to use csvlib
 #labels Featured
 
-= Introduction =
+=load a csv file=
+{{{
+import com.shortybmc.data.parser.CSV;
 
-Add your content here.
+// jghjfh
+var csv : CSV = new CSV( new URLRequest('example-1.csv') );
+csv.addEventListener( Event.COMPLETE, completeHandler );
+function completeHandler ( event : Event )
+{
+   trace ( csv.dump() )
+}
+}}}
 
 
-= Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+
+
+
+
+
