@@ -67,6 +67,5 @@ csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-7.csv') );
 }}}
 
- *NOTE* All headers are locked! If you will overwrite a ambeded, or individual header, you must always use 
-
+*NOTE* All headers are locked! If you will overwrite a ambeded, or individual header, you must always write overwrite = true
 
