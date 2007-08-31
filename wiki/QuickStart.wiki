@@ -2,7 +2,7 @@
 #labels Featured,Phase-Support,Phase-Deploy
 
 ===Import rule:===
-The first line in all your applications that will be use csvlib is
+The first line in all your applications is:
 {{{
 import com.shortybmc.data.parser.CSV;
 }}}
