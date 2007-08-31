@@ -18,7 +18,8 @@ var csv : CSV = new CSV();
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load( new URLRequest('example-2.csv') )
 }}}
-===Changing of filed seperator, recordset delimiter and quote tokens:===
+===Parse with individual filed seperator, recordset delimiter and quote tokens:===
+*Note:* If you want to change these default parser values, you must load your file with the "load" method, after initialization, *before* the load call! All other will be ignored.
 {{{
 csv = new CSV();
 csv.fieldSeperator = ';'
@@ -27,3 +28,7 @@ csv.recordsetDelimiter= '#'
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load( new URLRequest('example-6.csv') )
 }}}
+
+
+
+
