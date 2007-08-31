@@ -82,3 +82,8 @@ csv.addRecordSet( ['2','b','c','d'],  3 )
 csv.addRecordSet( ['3','b','j','d'] )
 }}}
 
+ * *deleteRecordSet*( <index : int> )
+ {{{
+ csv.deleteRecordSet( 0 )
+ }}}
+
