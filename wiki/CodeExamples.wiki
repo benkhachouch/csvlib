@@ -6,7 +6,7 @@
 {{{
 import com.shortybmc.data.parser.CSV;
 }}}
-===Load a csv file:===
+===Load a file:===
  * With constructor parameter _([http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/URLRequest.html URLRequest-Object])_
 {{{
 var csv : CSV = new CSV( new URLRequest('example-1.csv') );
@@ -68,6 +68,5 @@ csv.header = ['My Year', 'My Make', 'My Model']
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-7.csv') );
 }}}
-
 
 
