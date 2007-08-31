@@ -27,7 +27,7 @@ function completeHandler ( event : Event )
 }
 }}}
 ===Parse with individual filed seperator, recordset delimiter and quote tokens:===
-*Note:* If you want to change these default parser values, you must load your file with the "load" method, after initialization, *before* the load call! All other will be ignored.
+If you want to change these default parser values, you must load your file with the "load" method, after initialization, *before* the load call! All other will be ignored.
 {{{
 csv = new CSV();
 csv.fieldSeperator = ';'
@@ -68,4 +68,3 @@ csv.header = ['My Year', 'My Make', 'My Model']
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-7.csv') );
 }}}
-
