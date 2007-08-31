@@ -138,4 +138,29 @@ trace( filtered.join('\n') )
 // 3,b,j,d
 }}}
 
+ * *sort* ( <needle : (string|array) >, <removeDuplicates : Boolean = true> ) : void
+  * first argument can be a string, or a 1D array that includes a list of needles
+  * the second argument removes duplicates. Default is true.
+{{{
+var csv : CSV = new CSV();
+csv.embededHeader = false
+csv.addEventListener( Event.COMPLETE, sortExample );
+csv.load ( new URLRequest('example-8.csv') );
+
+
+// -> trace
+// 1,b,c,k
+// 1,b,c,k
+// 1,b,c,k
+// 3,b,j,d
+
+// without duplicates
+var filtered : Array = csv.search( ['1', 'k', 'k', '3'] )
+trace( filtered.join('\n') )
+
+// -> trace
+// 1,b,c,k
+// 3,b,j,d
+}}}
+
 ...
