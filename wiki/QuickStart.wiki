@@ -69,7 +69,7 @@ csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-7.csv') );
 }}}
 ===Data functions and manipulations:===
-*addRecordSet*( <recordset : array>, <index : int = null> ) : void
+* *addRecordSet*( <recordset : array>, <index : int = null> ) : void
  * the first argument is your recordset
  * the second argument is the index position to add recordset at. If index ist bigger than data array length, it will be pushed at the end of these. Negative values are supportet! Default is null eq. the recorsed will be pushed.
 {{{
@@ -92,7 +92,7 @@ trace ( csv.data.join('\n') );
 // 3,b,j,d
 }}}
 
-*deleteRecordSet*( <index : int> ) : Boolean
+* *deleteRecordSet*( <index : int> ) : Boolean
  * first argument is the index position to delete
  * method returns true or false on operation complete
 {{{
@@ -105,7 +105,7 @@ if ( csv.deleteRecordSet( 0 ) )
 // 3,b,j,d
 }}}
 
-*sort*( <needle : (string|array) >, <removeDuplicates : Boolean = true> ) : void
+* *sort*( <needle : (string|array) >, <removeDuplicates : Boolean = true> ) : void
  * first argument can be a string, or a 1D array that includes a list of needles
  * the second argument removes duplicate hits from result. Default is true.
 {{{
