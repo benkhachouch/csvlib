@@ -28,6 +28,31 @@ csv.recordsetDelimiter= '#'
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load( new URLRequest('example-6.csv') )
 }}}
+===Header functions and manipulations:===
+The default header settings are:
+ * embededHeader = true
+ * overwriteHeader = false
+
+ Add your own header, if *no* embeded exists
+ {{{
+var csv : CSV = new CSV();
+csv.embededHeader = false
+csv.header = ['label 1', 'label 2', 'label 3', 'label 4']
+csv.addEventListener( Event.COMPLETE, completeHandler );
+csv.load ( new URLRequest('example-8.csv') );
+}}}
+
+ Add your own header, if embeded *exists*
+ {{{
+var csv : CSV = new CSV();
+csv.headerOverwrite = true
+csv.header = ['My Year', 'My Make', 'My Model']
+csv.addEventListener( Event.COMPLETE, completeHandler );
+csv.load ( new URLRequest('example-7.csv') );
+}}}
+
+
+
 
 
 
