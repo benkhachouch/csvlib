@@ -69,7 +69,7 @@ csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-7.csv') );
 }}}
 ===Data functions and manipulations:===
- * addRecordSet( <recordset : array>, <index : int = null> )
+ * *addRecordSet*( <recordset : array>, <index : int = null> )
    * the first argument is your recordset
    * the second argument is the index position to add recordset at. If index ist bigger than data array length, it will be pushed at the end of these. Negative values are supportet! Default is null eq. the recorsed will be pushed.
 {{{
