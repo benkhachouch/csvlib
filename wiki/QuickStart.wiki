@@ -7,7 +7,7 @@ The first line in all your applications is:
 import com.shortybmc.data.parser.CSV;
 }}}
 ===Load a file:===
- * By constructor with  _([http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/URLRequest.html URLRequest-Object])_ parameter
+ * By constructor with  _([http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/URLRequest.html URLRequest-Object])_ argument.
 {{{
 var csv : CSV = new CSV( new URLRequest('example-1.csv') );
 csv.addEventListener( Event.COMPLETE, completeHandler );
@@ -16,7 +16,7 @@ function completeHandler ( event : Event )
 	// do something ...
 }
 }}}
- * With load method
+ * By public load method
 {{{
 var csv : CSV = new CSV();
 csv.addEventListener( Event.COMPLETE, completeHandler );
