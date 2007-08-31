@@ -1,13 +1,13 @@
 #summary How to use csvlib
 #labels Featured
 
-===Import rule===
+===Import rule:===
 
 {{{
 import com.shortybmc.data.parser.CSV;
 }}}
 
-===Load a csv file===
+===Load a csv file:===
 
  * via constructor
 
@@ -25,7 +25,6 @@ var csv : CSV = new CSV();
 csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load( new URLRequest('example-2.csv') )
 }}}
-
 
 
 
