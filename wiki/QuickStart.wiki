@@ -80,11 +80,51 @@ csv.addRecordSet( ['1','b','c','k'] )
 csv.addRecordSet( ['0','b','g','d'], -1 )
 csv.addRecordSet( ['2','b','c','d'],  3 )
 csv.addRecordSet( ['3','b','j','d'] )
+
+trace ( csv.header );
+trace ( csv.data.join('\n') );
+
+// -> trace
+// label 1,label 2,label 3,label 4
+// 0,b,g,d
+// 1,b,c,k
+// 2,b,c,d
+// 3,b,j,d
 }}}
 
  * *deleteRecordSet*( <index : int> ) : Boolean
-  *method returns true or false
+  * first argument is the index position to delete
+  * method returns true or false on operation complete
 {{{
- trace( csv.deleteRecordSet( 0 ) ) // true
+if ( csv.deleteRecordSet( 0 ) )
+	 trace ( csv.data.join('\n') );
+
+// -> trace
+// 1,b,c,k
+// 2,b,c,d
+// 3,b,j,d
+}}}
+
+ * *sort*( <needle : *>, <removeDuplicates : Boolean = true> ) : void
+  * first argument can be a string, or a 1D array that includes a list of needles
+  * the second argument removes duplicate hits from result. Default is true.
+{{{
+// with duplicates
+var filtered : Array = csv.search( ['1', 'k', 'k', '3'], false )
+trace( filtered.join('\n') )
+
+// -> trace
+// 1,b,c,k
+// 1,b,c,k
+// 1,b,c,k
+// 3,b,j,d
+
+// without duplicates
+var filtered : Array = csv.search( ['1', 'k', 'k', '3'] )
+trace( filtered.join('\n') )
+
+// -> trace
+// 1,b,c,k
+// 3,b,j,d
 }}}
 
