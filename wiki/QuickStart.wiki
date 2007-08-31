@@ -71,4 +71,4 @@ csv.load ( new URLRequest('example-7.csv') );
 ===Data functions and manipulations:===
 
 
-... foo
+... foo, hello world
