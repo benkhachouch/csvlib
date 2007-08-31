@@ -7,7 +7,7 @@
 import com.shortybmc.data.parser.CSV;
 }}}
 ===Load a csv file:===
- * constructor
+ * With constructor parameter _([http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/URLRequest.html URLRequest])_
 {{{
 var csv : CSV = new CSV( new URLRequest('example-1.csv') );
 csv.addEventListener( Event.COMPLETE, completeHandler );
