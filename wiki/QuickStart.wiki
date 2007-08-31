@@ -71,9 +71,7 @@ csv.load ( new URLRequest('example-7.csv') );
 ===Data functions and manipulations:===
  * addRecordSet( <recordset : array>, <index : int = null> )
    * the first argument is your recordset
-   * the second argument is the index position there you will add the rcordset. If index ist bigger than
-     data array length, it will be pushed at the end of these. Negative values are supportet! Default is
-     null eq. the recorsed will be pushed.
+   * the second argument is the index position to add. If index ist bigger than data array length, it will be pushed at the end of these. Negative values are supportet! Default is null eq. the recorsed will be pushed.
  {{{
 var csv : CSV = new CSV();
 csv.embededHeader = false
