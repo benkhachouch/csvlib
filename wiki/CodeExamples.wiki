@@ -2,7 +2,7 @@
 #labels Featured
 
 ===Import rule:===
-
+The first line in all your applications that will be use csvlib is
 {{{
 import com.shortybmc.data.parser.CSV;
 }}}
