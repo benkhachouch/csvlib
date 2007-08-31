@@ -6,18 +6,13 @@
 {{{
 import com.shortybmc.data.parser.CSV;
 }}}
-
 ===Load a csv file:===
-
  * via constructor
-
 {{{
 var csv : CSV = new CSV( new URLRequest('example-1.csv') );
 csv.addEventListener( Event.COMPLETE, completeHandler );
 }}}
-
  * or load method
-
 {{{
 var csv : CSV = new CSV();
 csv.addEventListener( Event.COMPLETE, completeHandler );
