@@ -69,9 +69,9 @@ csv.addEventListener( Event.COMPLETE, completeHandler );
 csv.load ( new URLRequest('example-7.csv') );
 }}}
 ===Data functions and manipulations:===
- * *addRecordSet*( <recordset : array>, <index : int = null> )
-   * the first argument is your recordset
-   * the second argument is the index position to add recordset at. If index ist bigger than data array length, it will be pushed at the end of these. Negative values are supportet! Default is null eq. the recorsed will be pushed.
+ * *addRecordSet*( <recordset : array>, <index : int = null> ) : void
+  * the first argument is your recordset
+  * the second argument is the index position to add recordset at. If index ist bigger than data array length, it will be pushed at the end of these. Negative values are supportet! Default is null eq. the recorsed will be pushed.
 {{{
 var csv : CSV = new CSV();
 csv.embededHeader = false
@@ -82,8 +82,9 @@ csv.addRecordSet( ['2','b','c','d'],  3 )
 csv.addRecordSet( ['3','b','j','d'] )
 }}}
 
- * *deleteRecordSet*( <index : int> )
- {{{
- csv.deleteRecordSet( 0 )
- }}}
+ * *deleteRecordSet*( <index : int> ) : Boolean
+  *method returns true or false
+{{{
+ trace( csv.deleteRecordSet( 0 ) ) // true
+}}}
 
