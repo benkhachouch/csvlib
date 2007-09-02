@@ -26,6 +26,20 @@ function completeHandler ( event : Event )
 	// do something ...
 }
 }}}
+===Parse string without loading a file:===
+{{{
+var csv : CSV = new CSV();
+csv.data = 'Year,Make,Model\r1997,Ford,E350\r2000,Mercury,Cougar\n'
+csv.decode()
+
+trace( csv.header )
+trace( csv.data.join('\n') )
+
+// -> trace
+// Year,Make,Model
+// 1997,Ford,E350
+// 2000,Mercury,Cougar
+}}}
 ===Parse with individual filed seperator, recordset delimiter or quote tokens:===
 If you want to change these default parser values, you must load your file with the "load" method, after initialization, *before* the load call! All other will be ignored.
 {{{
