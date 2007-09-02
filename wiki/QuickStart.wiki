@@ -31,7 +31,8 @@ function completeHandler ( event : Event )
  * Internal csv formated string
 {{{
 var csv : CSV = new CSV();
-csv.decode( 'Year,Make,Model\r1997,Ford,E350\r2000,Mercury,Cougar\r' )
+csv.data = 'Year,Make,Model\r1997,Ford,E350\r2000,Mercury,Cougar\r'
+csv.decode()
 
 trace ( 'Is array: ' + (csv.data is Array) + '\r' + csv.header + '\r' + csv.data.join('\n') );
 
