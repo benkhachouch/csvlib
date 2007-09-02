@@ -7,7 +7,7 @@ The first line in all your applications is:
 import com.shortybmc.data.parser.CSV;
 }}}
 ===Decode:===
- * External file by constructor with  _([http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/URLRequest.html URLRequest-Object])_ as parameter.
+ * External csv file by constructor with  _([http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/URLRequest.html URLRequest-Object])_ as parameter.
 {{{
 var csv : CSV = new CSV( new URLRequest('example-1.csv') );
 csv.addEventListener ( Event.COMPLETE, completeHandler );
@@ -17,7 +17,7 @@ function completeHandler ( event : Event )
 	// do something ...
 }
 }}}
- * External file by public load method
+ * External csv file by public load method
 {{{
 var csv : CSV = new CSV();
 csv.addEventListener ( Event.COMPLETE, completeHandler );
@@ -28,7 +28,7 @@ function completeHandler ( event : Event )
 	// do something ...
 }
 }}}
- * Internal string
+ * Internal csv formated string
 {{{
 var csv : CSV = new CSV();
 csv.decode( 'Year,Make,Model\r1997,Ford,E350\r2000,Mercury,Cougar\r' )
