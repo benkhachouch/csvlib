@@ -7,7 +7,7 @@ The first line in all your applications is:
 import com.shortybmc.data.parser.CSV;
 }}}
 ===Decode:===
- * Load a file by constructor with  _([http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/URLRequest.html URLRequest-Object])_ as parameter.
+ * External file by constructor with  _([http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/URLRequest.html URLRequest-Object])_ as parameter.
 {{{
 var csv : CSV = new CSV( new URLRequest('example-1.csv') );
 csv.addEventListener( Event.COMPLETE, completeHandler );
@@ -16,7 +16,7 @@ function completeHandler ( event : Event )
 	// do something ...
 }
 }}}
- * Load a file by public load method
+ * External file by public load method
 {{{
 var csv : CSV = new CSV();
 csv.addEventListener( Event.COMPLETE, completeHandler );
@@ -26,7 +26,7 @@ function completeHandler ( event : Event )
 	// do something ...
 }
 }}}
- * Decode a internal string:===
+ * Internal string
 {{{
 var csv : CSV = new CSV();
 csv.data = 'Year,Make,Model\r1997,Ford,E350\r2000,Mercury,Cougar\n'
@@ -39,6 +39,23 @@ trace( csv.data.join('\n') )
 // Year,Make,Model
 // 1997,Ford,E350
 // 2000,Mercury,Cougar
+}}}
+ * Internal array
+{{{
+var csv : CSV = new CSV();
+//csv.embededHeader = false
+//csv.headerOverwrite = true
+csv.data = [ ['Year', 'Make', 'Model'],[ '1997', 'Ford', 'E350' ], [ '2010', 'Ford', 'x50'  ] ]
+
+trace ( csv.header );
+trace ( csv.data.join('\r') );
+	
+trace ( '------------------')
+
+// -> trace
+// Year,Make,Model
+// 1997,Ford,E350
+// 2010,Ford,x50
 }}}
 ===Parse with individual filed seperator, recordset delimiter or quote tokens:===
 If you want to change these default parser values, you must load your file with the "load" method, after initialization, *before* the load call! All other will be ignored.
