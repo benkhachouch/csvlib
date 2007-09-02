@@ -31,7 +31,7 @@ function completeHandler ( event : Event )
  * Internal string
 {{{
 var csv : CSV = new CSV();
-csv.data = 'Year,Make,Model\r1997,Ford,E350\r2000,Mercury,Cougar\n'
+csv.data = 'Year,Make,Model\r1997,Ford,E350\r2000,Mercury,Cougar\r'
 csv.decode()
 
 trace( csv.header )
