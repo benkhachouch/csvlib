@@ -1,15 +1,12 @@
 #summary csvlib version history
 #labels Featured
 
-=csvlib version history=
-
 || *Date* || *Version* || *Log* ||
 || 27.08.2007 || 1.0.0 || initial release ||
 || 30.08.2007 || 1.1.0 || header support implemented, fixed package namespace||
 || 31.08.2007 || 1.2.0 || data sort implemented||
 || 31.08.2007 || 1.2.1 || missed StringUtils class added||
 || 31.08.2007 || 1.3.0 || data manipulation implemented||
-
 
 
 
