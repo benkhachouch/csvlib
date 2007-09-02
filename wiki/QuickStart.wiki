@@ -43,8 +43,6 @@ trace( csv.data.join('\n') )
  * Internal array
 {{{
 var csv : CSV = new CSV();
-//csv.embededHeader = false
-//csv.headerOverwrite = true
 csv.data = [ ['Year', 'Make', 'Model'],[ '1997', 'Ford', 'E350' ], [ '2010', 'Ford', 'x50'  ] ]
 
 trace ( csv.header );
