@@ -36,6 +36,7 @@ csv.decode( 'Year,Make,Model\r1997,Ford,E350\r2000,Mercury,Cougar\r' )
 trace ( 'Is array: ' + (csv.data is Array) + '\r' + csv.header + '\r' + csv.data.join('\n') );
 
 // -> trace
+// Is array: true
 // Year,Make,Model
 // 1997,Ford,E350
 // 2000,Mercury,Cougar
