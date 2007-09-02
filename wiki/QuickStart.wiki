@@ -42,7 +42,7 @@ trace ( 'Is array: ' + (csv.data is Array) + '\r' + csv.header + '\r' + csv.data
 // 2000,Mercury,Cougar
 }}}
 ===Encode==
- * To CSV string
+ * To CSV formated string
 {{{
 var csv : CSV = new CSV();
 csv.addEventListener ( Event.COMPLETE, completeHandler );
