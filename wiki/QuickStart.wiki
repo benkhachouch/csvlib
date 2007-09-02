@@ -41,7 +41,7 @@ trace( csv.data.join('\n') )
 // 2000,Mercury,Cougar
 }}}
 ===Encode==
- * Internal string
+ * Array back to csv string
 {{{
 var csv : CSV = new CSV();
 csv.embededHeader = false
