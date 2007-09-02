@@ -45,7 +45,7 @@ trace( csv.data.join('\n') )
 {{{
 var csv : CSV = new CSV();
 csv.addEventListener ( Event.COMPLETE, completeHandler );
-csv.load ( new URLRequest('example-2.csv') );
+csv.load ( new URLRequest('example-7.csv') );
 function completeHandler ( event : Event )
 {
 	csv.encode ();
@@ -54,10 +54,10 @@ function completeHandler ( event : Event )
 }
 
 // -> trace
-// Is string?: true, length: 45
+// Is string?: true, length: 51
 // Year,Make,Model
 // 1997,Ford,E350
-// 2010,Ford,x50
+// 2000,Mercury,Cougar
 }}}
 ===Parse with individual filed seperator, recordset delimiter or quote tokens:===
 If you want to change these default parser values, you must load your file with the "load" method, after initialization, *before* the load call! All other will be ignored.
