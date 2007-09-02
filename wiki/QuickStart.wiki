@@ -10,19 +10,21 @@ import com.shortybmc.data.parser.CSV;
  * External file by constructor with  _([http://livedocs.adobe.com/flash/9.0/ActionScriptLangRefV3/flash/net/URLRequest.html URLRequest-Object])_ as parameter.
 {{{
 var csv : CSV = new CSV( new URLRequest('example-1.csv') );
-csv.addEventListener( Event.COMPLETE, completeHandler );
+csv.addEventListener ( Event.COMPLETE, completeHandler );
 function completeHandler ( event : Event )
 {
+	trace ( csv.data.join('\r') )
 	// do something ...
 }
 }}}
  * External file by public load method
 {{{
 var csv : CSV = new CSV();
-csv.addEventListener( Event.COMPLETE, completeHandler );
-csv.load( new URLRequest('example-2.csv') )
+csv.addEventListener ( Event.COMPLETE, completeHandler );
+csv.load ( new URLRequest('example-2.csv') );
 function completeHandler ( event : Event )
 {
+	trace ( csv.data.join('\r') );
 	// do something ...
 }
 }}}
