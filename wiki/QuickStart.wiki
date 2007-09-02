@@ -41,7 +41,7 @@ trace( csv.data.join('\n') )
 // 2000,Mercury,Cougar
 }}}
 ===Encode==
- * Array back to csv string
+ * To CSV string
 {{{
 var csv : CSV = new CSV();
 csv.addEventListener ( Event.COMPLETE, completeHandler );
