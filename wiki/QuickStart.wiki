@@ -50,18 +50,16 @@ csv.embededHeader = false
 csv.header = ['label 1', 'label 2', 'label 3', 'label 4' ]
 csv.addRecordSet( ['1','b','c','k'] )
 csv.addRecordSet( ['0','b','g','d'], -1 )
-csv.addRecordSet( ['2','b','c','d'],  3 )
-csv.addRecordSet( ['3','b','j','d'] )
 
 csv.encode()
 trace ( csv.data )
+trace ( 'Is string: ' + (csv.data is String) + '\r' + csv.data );
 
 // -> trace
+// Is string: true
 // label 1,label 2,label 3,label 4
 // 0,b,g,d
 // 1,b,c,k
-// 2,b,c,d
-// 3,b,j,d
 }}}
 ===Parse with individual filed seperator, recordset delimiter or quote tokens:===
 If you want to change these default parser values, you must load your file with the "load" method, after initialization, *before* the load call! All other will be ignored.
