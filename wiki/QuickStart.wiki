@@ -52,7 +52,6 @@ csv.addRecordSet( ['1','b','c','k'] )
 csv.addRecordSet( ['0','b','g','d'], -1 )
 
 csv.encode()
-trace ( csv.data )
 trace ( 'Is string: ' + (csv.data is String) + '\r' + csv.data );
 
 // -> trace
