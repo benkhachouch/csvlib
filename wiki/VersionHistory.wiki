@@ -2,7 +2,7 @@
 #labels Featured
 
 || *Date* || *Version* || *Log* ||
-|| 03.09.2007 ||  1.4.0  || code fixed, encoding to csv formated string implemented
+|| 03.09.2007 ||  1.4.0  || code fixed, encoding to csv formated string implemented ||
 || 31.08.2007 ||  1.3.0  || data manipulation implemented ||
 || 31.08.2007 ||  1.2.1  || missed StringUtils class added ||
 || 31.08.2007 ||  1.2.0  || data sort implemented ||
